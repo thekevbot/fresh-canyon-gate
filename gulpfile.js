@@ -73,9 +73,14 @@ gulp.task('images', function(){
     .pipe(gulp.dest('dist/assets/img'))
 })
 
+gulp.task('files', function(){
+    return gulp.src('src/assets/files/**/*')
+    .pipe((gulp.dest('dist/assets/files')))
+})
+
 gulp.task('fonts', function() {
   return gulp.src('src/assets/fonts/**/*')
-  .pipe(cache(gulp.dest('dist/fonts')))
+  .pipe((gulp.dest('dist/assets/fonts')))
 })
 
 gulp.task('clean:dist', function() {
@@ -84,7 +89,7 @@ gulp.task('clean:dist', function() {
 
 gulp.task('build', function(callback){
     runSequence('clean:dist',
-        ['sass', 'minify', 'images', 'fonts'],
+        ['sass', 'minify', 'images', 'files', 'fonts'],
         callback
     )
 })
