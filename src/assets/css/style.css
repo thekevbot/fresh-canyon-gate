@@ -56,6 +56,10 @@ html, body {
   background-repeat: no-repeat;
   background-position: right center;
   background-color: #E5E5E1; }
+  .container.container--no-flex {
+    display: block;
+    height: auto;
+    min-height: 100%; }
   .container .col {
     height: 100%;
     width: 50%;
@@ -191,8 +195,28 @@ html, body {
   display: block;
   font-size: 12px; }
 
+article {
+  margin-top: 2em;
+  max-width: 1140px; }
+  article ul {
+    list-style: disc;
+    margin-left: 1.25em;
+    margin-top: 1em; }
+    article ul li {
+      margin-top: 8px; }
+      article ul li:first-child {
+        margin-top: none; }
+
 h2 {
   font-size: 40px; }
+
+h4 {
+  font-size: 1.25em;
+  margin-top: 1.25em; }
+
+p {
+  margin-top: 1em;
+  line-height: 1.4em; }
 
 a {
   color: #002A3B; }

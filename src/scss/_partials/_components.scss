@@ -9,6 +9,11 @@
     background-repeat: no-repeat;
     background-position: right center;
     background-color:$light-beige;
+    &.container--no-flex{
+        display: block;
+        height:auto;
+        min-height: 100%;
+    }
     .col{
         height:100%;
         width:50%;
@@ -174,8 +179,32 @@
     font-size:12px;
 }
 
+article{
+    margin-top:2em;
+    max-width:1140px;
+    ul{
+        list-style: disc;
+        margin-left:1.25em;
+        margin-top:1em;
+        li{
+            margin-top:8px;
+            &:first-child{
+                margin-top:none;
+            }
+        }
+    }
+}
+
 h2{
     font-size:40px;
+}
+h4{
+    font-size:1.25em;
+    margin-top:1.25em;
+}
+p{
+    margin-top:1em;
+    line-height:1.4em;
 }
 
 a{
